@@ -7,7 +7,7 @@
     "dev": "nodemon index.ts",
     "start": "nodemon index.ts",
     "install-server": "cd backend && npm install",
-    "start-server": "cd backend && node index.ts",
+    "start-server": "cd backend && nodemon index.ts",
     "install-client": "cd frontend && npm install",
     "build-client": "cd frontend && npm run build",
     "start-client": "cd frontend && npm run start"
