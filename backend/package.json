@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "nodemon index.ts",
     "start": "nodemon index.ts",
-    "build": "tsc"
+    "develop": "concurrently \"cd index && npm run watch\" \"cd frontend && npm run dev\"",
+    "install": "cd index && npm i && cd ../frontend && npm i --production=false",
+    "build": "cd frontend && npm run build",
+    "render-build": "npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
