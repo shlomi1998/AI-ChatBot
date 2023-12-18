@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;800&family=Work+Sans&display=swap");
+
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #05101c;
+  color: white;
+  font-family: "Roboto Slab", serif;
+  
+}
+
+.image-inverted {
+  filter: invert(100%);
+}
+.nav-link {
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 8px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+.MuiOutlinedInput-input-root.Mui-focused,
+.MuiOutlinedInput-notchedOutline {
+  border-color: white !important;
+}
+
+.rotate {
+  animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+/* עיצוב עבור Chrome, Edge, ו-Safari */
+::-webkit-scrollbar {
+  width: 12px; /* רוחב פס הגלילה */
+}
+
+::-webkit-scrollbar-track {
+  background: #111B27; /* רקע פס הגלילה - אפור בהיר */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #363636; /* רקע החלק הנע - אפור בינוני */
+  border-radius: 6px; /* עיגול הקצוות */
+}
+
+
+
