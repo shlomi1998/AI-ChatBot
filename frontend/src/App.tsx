@@ -3,7 +3,12 @@ import Header from "./components/Header";
 import { Routes, Route } from "react-router-dom";
 import { Home, Login, Signup, Chat, NotFound } from "./pages";
 import { useAuth } from "./context/AuthContext";
+import { disableReactDevTools } from "@fvilers/disable-react-devtools";
 
+
+if(process.env.NODE_ENV === "production"){
+  disableReactDevTools();
+}
 const App = () => {
   // console.log(useAuth()?.isLoggedIn)
   const auth = useAuth();

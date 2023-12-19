@@ -2,7 +2,7 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "backend for Synagogue",
-  "main": "app.ts",
+  "main": "index.ts",
   "scripts": {
     "dev": "nodemon index.ts",
     "start": "nodemon index.ts",
