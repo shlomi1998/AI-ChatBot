@@ -26,6 +26,10 @@ app.use(morgan("dev"));
 
 app.use("/api/v1", appRouter);
 
+app.get("/", (req: express.Request, res: express.Response) => {
+  res.send("backend deployment is live");
+})
+
 app.listen(PORT, async () => {
   try {
     console.log(`Server is running on http://localhost:${PORT}`);
