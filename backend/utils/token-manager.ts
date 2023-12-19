@@ -1,8 +1,7 @@
 import jwt from "jsonwebtoken";
-import dotenv from "dotenv";
 import { Request, Response, NextFunction } from "express";
 import { COOKIE_NAME } from "./constants";
-dotenv.config();
+
 
 const secret: any = process.env.JWT_SECRET;
 

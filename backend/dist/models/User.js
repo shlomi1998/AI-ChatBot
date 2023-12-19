@@ -1,8 +1,11 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-var mongoose_1 = require("mongoose");
-var crypto_1 = require("crypto");
-var chatSchema = new mongoose_1.default.Schema({
+const mongoose_1 = __importDefault(require("mongoose"));
+const crypto_1 = require("crypto");
+const chatSchema = new mongoose_1.default.Schema({
     id: {
         type: String,
         default: (0, crypto_1.randomUUID)(),
@@ -16,7 +19,7 @@ var chatSchema = new mongoose_1.default.Schema({
         required: true,
     },
 });
-var userSchema = new mongoose_1.default.Schema({
+const userSchema = new mongoose_1.default.Schema({
     name: {
         type: String,
         required: true,

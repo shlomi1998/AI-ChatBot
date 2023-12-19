@@ -1,3 +1,4 @@
+"use strict";
 // import  Configuration  from "openai";
 // export const configureOpenAI = () => {
 //   console.log(process.env.OPENAI_ORAGANIZATION_ID, process.env.OPEN_AI_SECRET);
