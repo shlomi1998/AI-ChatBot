@@ -1,3 +1,5 @@
+import dotenv from 'dotenv';
+dotenv.config(); 
 import jwt from "jsonwebtoken";
 import { Request, Response, NextFunction } from "express";
 import { COOKIE_NAME } from "./constants";

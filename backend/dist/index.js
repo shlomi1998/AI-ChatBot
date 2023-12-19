@@ -30,6 +30,9 @@ app.use((0, cookie_parser_1.default)(process.env.COOKIE_SECRET));
 //remove before in production
 app.use((0, morgan_1.default)("dev"));
 app.use("/api/v1", routers_1.default);
+app.get("/", (req, res) => {
+    res.send("backend deployment is live");
+});
 app.listen(PORT, () => __awaiter(void 0, void 0, void 0, function* () {
     try {
         console.log(`Server is running on http://localhost:${PORT}`);
