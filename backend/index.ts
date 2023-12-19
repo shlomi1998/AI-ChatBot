@@ -8,7 +8,7 @@ import cookieParser from "cookie-parser";
 // import bodyParser from "body-parser";
 
 const app = express();
-dotenv.config();
+dotenv.config(); 
 
 const PORT = process.env.PORT || 5000;
 
