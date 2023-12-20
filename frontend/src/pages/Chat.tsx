@@ -165,10 +165,10 @@ const Chat = () => {
             scrollBehavior: "smooth",
             eight: { xs: "90%", md: "60vh" }, // Adjust height based on screen size
             "@media screen and (max-width: 600px)": {
-              height: "70%", // Set height to 90% when screen width is under 600px
+              height: "60%", // Set height to 90% when screen width is under 600px
             },
             '@media screen and (max-width: 400px)': {
-              height: '60%', 
+              height: '50%', 
             },
 
           }}
