@@ -41,12 +41,6 @@ const userSignup = (req, res, next) => __awaiter(void 0, void 0, void 0, functio
             password: hashedPassword,
         });
         yield user.save();
-        //create token and store in cookie
-        res.clearCookie(constants_1.COOKIE_NAME, {
-            path: "/", //All paths
-            httpOnly: true, //Does not give requests from the client
-            signed: true, //Checking that the cookies were not damaged
-        });
         const token = (0, token_manager_1.createToken)(user._id.toString(), user.email, "7d");
         res.cookie(constants_1.COOKIE_NAME, token, {
             path: "/",
@@ -72,12 +66,6 @@ const userLogin = (req, res, next) => __awaiter(void 0, void 0, void 0, function
         if (!isPasswordCorrect) {
             return res.status(403).json({ message: "Incorrect password" });
         }
-        //create token and store in cookie
-        res.clearCookie(constants_1.COOKIE_NAME, {
-            path: "/", //All paths
-            httpOnly: true, //Does not give requests from the client
-            signed: true, //Checking that the cookies were not damaged
-        });
         const token = (0, token_manager_1.createToken)(user._id.toString(), user.email, "7d");
         const expires = new Date();
         expires.setDate(expires.getDate() + 7); // 7 days

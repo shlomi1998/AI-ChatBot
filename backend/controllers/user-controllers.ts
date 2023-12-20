@@ -35,13 +35,7 @@ export const userSignup = async (
       password: hashedPassword,
     });
     await user.save();
-    //create token and store in cookie
-
-    res.clearCookie(COOKIE_NAME, {
-      path: "/", //All paths
-      httpOnly: true, //Does not give requests from the client
-      signed: true, //Checking that the cookies were not damaged
-    });
+    
 
     const token = createToken(user._id.toString(), user.email, "7d");
     res.cookie(COOKIE_NAME, token, {
@@ -72,14 +66,7 @@ export const userLogin = async (
       return res.status(403).json({ message: "Incorrect password" });
     }
 
-    //create token and store in cookie
-
-    res.clearCookie(COOKIE_NAME, {
-      path: "/", //All paths
-      httpOnly: true, //Does not give requests from the client
-      signed: true, //Checking that the cookies were not damaged
-    });
-
+    
     const token = createToken(user._id.toString(), user.email, "7d");
     const expires = new Date();
     expires.setDate(expires.getDate() + 7); // 7 days
