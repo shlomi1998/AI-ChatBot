@@ -170,6 +170,7 @@ const Chat = () => {
             '@media screen and (max-width: 400px)': {
               height: '70%', 
             },
+            
           }}
         >
           {chatMessages.map((chat, index) => (
