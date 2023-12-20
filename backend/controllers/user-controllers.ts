@@ -43,6 +43,8 @@ export const userSignup = async (
       expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000), // 7 days
       httpOnly: true,
       signed: true,
+      secure:true,
+      sameSite:"none"
     });
     res.status(201).json({ message: "OK", name: user.name ,email: user.email });
   } catch (error: any) {
@@ -75,6 +77,8 @@ export const userLogin = async (
       expires: expires,
       httpOnly: true,
       signed: true,
+      secure:true,
+      sameSite:"none"
     });
 
     res.status(200).json({ message: "OK", name: user.name ,email: user.email});
@@ -126,6 +130,8 @@ export const userLogout = async (
       path: "/", //All paths
       httpOnly: true, //Does not give requests from the client
       signed: true, //Checking that the cookies were not damaged
+      secure:true,
+      sameSite:"none"
     });
     return res
       .status(200)

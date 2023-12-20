@@ -47,6 +47,8 @@ const userSignup = (req, res, next) => __awaiter(void 0, void 0, void 0, functio
             expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000), // 7 days
             httpOnly: true,
             signed: true,
+            secure: true,
+            sameSite: "none"
         });
         res.status(201).json({ message: "OK", name: user.name, email: user.email });
     }
@@ -74,6 +76,8 @@ const userLogin = (req, res, next) => __awaiter(void 0, void 0, void 0, function
             expires: expires,
             httpOnly: true,
             signed: true,
+            secure: true,
+            sameSite: "none"
         });
         res.status(200).json({ message: "OK", name: user.name, email: user.email });
     }
@@ -116,6 +120,8 @@ const userLogout = (req, res, next) => __awaiter(void 0, void 0, void 0, functio
             path: "/", //All paths
             httpOnly: true, //Does not give requests from the client
             signed: true, //Checking that the cookies were not damaged
+            secure: true,
+            sameSite: "none"
         });
         return res
             .status(200)
