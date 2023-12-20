@@ -59,4 +59,10 @@ body {
 }
 
 
-
+@media screen and (min-width: 600px) {
+  .nav-link {
+    font-size: 12px; /* או כל גודל אחר שתרצה */
+    padding: 5px 10px; 
+    display: none;/* תכוונן גם את הריווחים לפי צורך */
+  }
+}
