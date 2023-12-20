@@ -152,7 +152,7 @@ const Chat = () => {
         </Typography>
         <Box
           sx={{
-            
+
             width: "100%",
             height: "60vh",
             borderRadius: 3,
@@ -165,10 +165,10 @@ const Chat = () => {
             scrollBehavior: "smooth",
             eight: { xs: "90%", md: "60vh" }, // Adjust height based on screen size
             "@media screen and (max-width: 600px)": {
-              height: "90%", // Set height to 90% when screen width is under 600px
+              height: "80%", // Set height to 90% when screen width is under 600px
             },
             '@media screen and (max-width: 400px)': {
-              height: '80%', 
+              height: '70%', 
             },
           }}
         >
