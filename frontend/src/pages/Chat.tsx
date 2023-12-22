@@ -163,14 +163,7 @@ const Chat = () => {
             overflowX: "hidden",
             overflowY: "auto",
             scrollBehavior: "smooth",
-            eight: { xs: "90%", md: "60vh" }, // Adjust height based on screen size
-            "@media screen and (max-width: 600px)": {
-              height: "60%", // Set height to 90% when screen width is under 600px
-            },
-            '@media screen and (max-width: 400px)': {
-              height: '50%', 
-            },
-
+           
           }}
         >
           {chatMessages.map((chat, index) => (
@@ -182,7 +175,7 @@ const Chat = () => {
           style={{
             width: "100%",
             borderRadius: 8,
-            background: "rgb(17,29,39)",
+            background: "rgb(17,27,39)",
             display: "flex",
             margin: "auto",
           }}
@@ -194,11 +187,10 @@ const Chat = () => {
               width: "100%",
               backgroundColor: "transparent",
               padding: "30px",
-              borderRadius: "none",
+              border: "none",
               outline: "none",
               color: "white",
               fontSize: "20px",
-              border: "none",
             }}
           />
           <IconButton
